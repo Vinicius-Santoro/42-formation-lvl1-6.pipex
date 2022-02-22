@@ -12,36 +12,36 @@
 
 For you to test this project, you should use the following way:
 
-```c
+```bash
 ./pipex file1 "cmd1" "cmd2" file2
 ```
 Just in case: file1 and file2 are file names, cmd1 and cmd2 are shell commands with their parameters.
 
 The execution of the pipex program should do the same as the next shell command:
 
-```c
+```bash
 < file1 cmd1 | cmd2 > file2
 ```
 
 <h1></h1>
 
 <b>Example 1:<b>
-```c
+```bash
 ./pipex infile "ls -l" "wc -l" outfile
 ```
 <b>Should be the same as:<b>
-```c
+```bash
 < infile ls -l | wc -l > outfile
 ```
 
 <h1></h1>
 
 <b>Example 2:<b>
-```c
+```bash
  ./pipex infile "grep a1" "wc -w" outfile
 ```
 <b>Should be the same as:<b>
-```c
+```bash
 < infile grep a1 | wc -w > outfile
 ```
 
